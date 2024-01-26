@@ -1,0 +1,17 @@
+.card{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    border: 3px solid blue;
+    border-radius: 10px;
+}
+
+.card > img{
+    width: 100%;
+}
+
+.card .name{
+    font-weight: bold;
+}

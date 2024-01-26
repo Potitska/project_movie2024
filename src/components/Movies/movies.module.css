@@ -1,0 +1,17 @@
+.list_card{
+    row-gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+.btnPagination > button{
+
+    width: 90px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    background: blue;
+    border: 5px solid white;
+}

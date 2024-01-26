@@ -1,0 +1,34 @@
+import React, {useState} from 'react';
+import {Outlet, useSearchParams} from "react-router-dom";
+import {useSelector} from "react-redux";
+import {Pagination} from "@mui/material";
+
+import {Movies} from "../components";
+import {Search} from "../components/Header/Search";
+import css from './moviesPage.module.css';
+
+
+const MoviesPage = () => {
+
+    const [searchText, setSearchText] = useState('');
+
+    const [, setQuery] = useSearchParams();
+    const {total_pages} = useSelector(state => state.movies);
+
+    return (
+        <div>
+            <div><Search setSearchText={setSearchText} searchText={searchText}/></div>
+            <Outlet/>
+            <Movies searchText={searchText}/>
+            <Pagination
+                className={css.Btn_pagination}
+                count={total_pages}
+                variant="outlined"
+                shape="rounded"
+                onChange={(e, page) => setQuery({page})}
+            />
+        </div>
+    );
+};
+
+export {MoviesPage};

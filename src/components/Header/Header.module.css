@@ -1,0 +1,63 @@
+.Header {
+    height: 90px;
+    width: 100%;
+    background: darkblue;
+    color: snow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+.Header > a {
+    text-decoration: none;
+}
+
+.name {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+
+}
+
+.moviesList {
+    cursor: pointer;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+.search {
+    position: relative;
+    right: -234px;
+    top: 22px;
+}
+
+.search > input {
+    border: 4px solid blue;
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    padding-left: 34px;
+    font-size: 16px;
+
+&
+:focus {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+}
+
+.icon {
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+    opacity: 0.3;
+    position: absolute;
+    left: 6px;
+    top: 6px
+}
+
+
