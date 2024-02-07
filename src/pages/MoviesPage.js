@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import {Outlet, useSearchParams} from "react-router-dom";
+import {useSearchParams} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {Pagination} from "@mui/material";
 
 import {Movies} from "../components";
 import {Search} from "../components/Header/Search";
+
 import css from './moviesPage.module.css';
 
 
@@ -18,7 +19,6 @@ const MoviesPage = () => {
     return (
         <div>
             <div><Search setSearchText={setSearchText} searchText={searchText}/></div>
-            <Outlet/>
             <Movies searchText={searchText}/>
             <Pagination
                 className={css.Btn_pagination}

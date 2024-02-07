@@ -4,6 +4,7 @@ import { useSearchParams} from "react-router-dom";
 
 import {moviesActions} from "../../redux";
 import {MovieOneCard} from "../MovieOneCard/MovieOneCard";
+
 import css from './movies.module.css';
 
 

@@ -1,9 +1,11 @@
-import css from './Header.module.css';
 import {Link, NavLink} from "react-router-dom";
 import {Switch} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
 
 import {themeActions} from "../../redux";
+
+import css from './Header.module.css';
+
 const Header = () => {
 
     const {themeCheck} = useSelector(state => state.theme);

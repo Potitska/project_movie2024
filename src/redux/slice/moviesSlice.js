@@ -7,7 +7,7 @@ const initialState = {
     movies: [],
     movie:{},
     genres: [],
-    movieByGenres: [],
+    movieByGenre: [],
     movieByName: [],
     isLoading: null,
     total_pages:0
@@ -64,7 +64,8 @@ const movieById = createAsyncThunk(
     'moviesSlice/movieById', async (id, thunkAPI)=>{
         try {
             const {data} = await movieService.getMovieById(id)
-            return data
+            const {results} = data
+            return results
         }catch (e) {
             return thunkAPI.rejectWithValue(e.response.data)
         }
@@ -89,7 +90,7 @@ const slice = createSlice({
             state.genres = action.payload
         })
         .addCase(movieByGenre.fulfilled, (state, action) => {
-            state.movieByGenres = action.payload
+            state.movieByGenre = action.payload
         })
         .addCase(movieByName.fulfilled, (state, action) => {
             state.movieByName = action.payload

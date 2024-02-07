@@ -5,7 +5,7 @@ const urls = {
     genres:()=> '/genre/movie/list',
     searchMovie: (name) => `/search/keyword?query=${name}`,
     movieById: (id) => `/movie/${id}`,
-    moviesByGenres: (genre_key, page) => `/discover/movie?with_genres=${genre_key}&page=${page}`
+    moviesByGenre: (genre_key) => `/discover/movie?with_genres=${genre_key}`
 }
 
 export {

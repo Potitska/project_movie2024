@@ -17,23 +17,19 @@ const router = createBrowserRouter([
             },
             {
                 path:AppRoutes.MOVIES,
-                element:<MoviesPage/>,
-                children:[
-                    {
-                        path:AppRoutes.MOVIE_BY_ID,
-                        element:<MovieByIdPage/>
-                    }
-                ]
+                element:<MoviesPage/>
+            },
+            {
+                path:AppRoutes.MOVIE_BY_ID,
+                element:<MovieByIdPage/>
             },
             {
                 path:AppRoutes.GENRES,
-                element:<GenresPage/>,
-                children:[
-                    {
-                        path:AppRoutes.GENRES_BY_ID,
-                        element:<MoviesByGenrePage/>
-                    }
-                ]
+                element:<GenresPage/>
+            },
+            {
+                path:AppRoutes.GENRES_BY_ID,
+                element:<MoviesByGenrePage/>
             },
             {
                 path: '*',

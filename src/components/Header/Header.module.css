@@ -41,14 +41,10 @@
     height: 35px;
     border-radius: 10px;
     padding-left: 34px;
-    font-size: 16px;
-
-&
-:focus {
+    font-size: 16px;} :focus {
     border: 1px solid rgba(0, 0, 0, 0.2);
-}
+        }
 
-}
 
 .icon {
     cursor: pointer;

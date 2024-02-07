@@ -6,7 +6,7 @@ const movieService = {
     getGenres: apiService.get(urls.genres()),
     getMovieByName: (name) => apiService.get(urls.searchMovie(name)),
     getMovieById: (id) => apiService.get(urls.movieById(id)),
-    getMoviesByGenre: (genre_key, page) => apiService.get(urls.moviesByGenres(genre_key, page))
+    getMoviesByGenre: (genre_key) => apiService.get(urls.moviesByGenre(genre_key))
 }
 
 export {

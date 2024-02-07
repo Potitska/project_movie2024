@@ -4,6 +4,7 @@ import {useParams} from "react-router-dom";
 
 import {moviesActions} from "../../redux";
 import {MovieOneCard} from "../MovieOneCard/MovieOneCard";
+
 import css from "./byGenre.module.css";
 
 const MovieByGenre = () => {
@@ -11,15 +12,15 @@ const MovieByGenre = () => {
     const key = useParams();
 
 
-    const {movieByGenres} = useSelector(state => state.movies);
+    const {movieByGenre} = useSelector(state => state.movies);
 
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(moviesActions.movieByGenre(key.genre_key))
+        dispatch(moviesActions.movieByGenre( key.genre_key))
     }, [dispatch, key])
 
-    const {results} = movieByGenres;
+    const {results} = movieByGenre;
     if (results) {
         return (
             <div className={css.movies_list}>
