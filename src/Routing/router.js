@@ -3,6 +3,7 @@ import {createBrowserRouter, Navigate} from "react-router-dom";
 import {MainLayout} from "../layouts";
 import {GenresPage, MovieByIdPage, MoviesByGenrePage, MoviesPage, NotFoundPage} from "../pages";
 import {AppRoutes} from "./AppRoutes";
+import {Favorite} from "../components";
 
 
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path:AppRoutes.GENRES_BY_ID,
                 element:<MoviesByGenrePage/>
+            },
+            {
+              path:AppRoutes.FAVORITE,
+              element:<Favorite/>
             },
             {
                 path: '*',

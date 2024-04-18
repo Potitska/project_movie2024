@@ -3,5 +3,6 @@ export const AppRoutes = {
     MOVIES: "/movies",
     MOVIE_BY_ID: "/movies/:id",
     GENRES: "/genres",
-    GENRES_BY_ID: "/genres/:genre_key"
+    GENRES_BY_ID: "/genres/:genre_key",
+    FAVORITE: "/favorite",
 }

@@ -56,4 +56,46 @@
     top: 6px
 }
 
+@media screen and (max-width: 768px) {
+    .header {
+        height: auto;
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .name {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .name {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .name {
+        font-size: 3rem;
+    }
+}
+
+
+@media screen and (min-width: 1201px) and (max-width: 1440px) {
+    .name {
+        font-size: 3.5rem;
+    }
+}
+
+
+@media screen and (min-width: 1441px) {
+    .name {
+        font-size: 4rem;
+    }
+}
+
 

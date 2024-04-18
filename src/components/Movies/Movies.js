@@ -22,18 +22,12 @@ const Movies = ({searchText}) => {
     }, [dispatch, page])
 
     return (
-        <div>
             <div className={css.list_card}>
                 {isLoading && <h1>Loading...</h1>}
                 {movies
                     .filter((movie)=>movie.original_title.toLowerCase().includes(searchText.toString()))
                     .map(movie=><MovieOneCard key={movie.id} movie={movie}/>)}
             </div>
-            {/*<div className={css.btnPagination}>*/}
-            {/*    <button onClick={() => navigate(`/movies?page=${Number(page)-1}`)} disabled={page<=1}>prev</button>*/}
-            {/*    <button onClick={() => navigate(`/movies?page=${Number(page)+1}`)}>next</button>*/}
-            {/*</div>*/}
-        </div>
     );
 };
 

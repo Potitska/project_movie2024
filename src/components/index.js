@@ -6,3 +6,4 @@ export * from './Genre/Genre';
 export * from './MovieByGenre/MovieByGenre';
 export * from './MovieByName/MovieByName';
 export * from './MovieById/MovieById';
+export * from './Favorite/Favorite';

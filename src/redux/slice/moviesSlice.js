@@ -10,8 +10,8 @@ const initialState = {
     movieByGenre: [],
     movieByName: [],
     isLoading: null,
-    total_pages:0
-
+    total_pages:0,
+    favoriteMovies:[],
 };
 
 const getAll = createAsyncThunk('moviesSlice/getAll',
@@ -75,7 +75,14 @@ const movieById = createAsyncThunk(
 const slice = createSlice({
     name: 'moviesSlice',
     initialState,
-    reducers: {},
+    reducers: {
+        addFavoriteMovie: (state, action)=>{
+            state.favoriteMovies.push(action.payload);
+        },
+        deleteFavoriteMovie:(state, action)=>{
+            state.favoriteMovies = state.favoriteMovies.filter(fav=>fav.id !== action.payload.id)
+        }
+    },
     extraReducers: builder => builder
         .addCase(getAll.fulfilled, (state, action) => {
             const {total_pages, results} = action.payload;
@@ -101,6 +108,7 @@ const slice = createSlice({
 })
 
 const {reducer: moviesReducer, actions} = slice;
+export const {addFavoriteMovie, deleteFavoriteMovie} = slice.actions;
 
 const moviesActions = {
     ...actions,
@@ -115,3 +123,4 @@ export {
     moviesReducer,
     moviesActions
 }
+

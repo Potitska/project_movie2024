@@ -15,3 +15,8 @@
 .card .name{
     font-weight: bold;
 }
+
+.favoriteBtn{
+    cursor: pointer;
+
+}

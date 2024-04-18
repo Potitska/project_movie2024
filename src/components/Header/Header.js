@@ -16,6 +16,7 @@ const Header = () => {
             <Link to={'/'}><div className={css.name}>Binge-Watch</div></Link>
             <NavLink className={css.moviesList} to={{ pathname: '/movies', search: '?page=1' }}>Movies</NavLink>
             <NavLink className={css.moviesList} to={'/genres'}>Genres</NavLink>
+            <NavLink className={css.moviesList} to={'/favorite'}>Favorite</NavLink>
             <Switch defaultChecked={themeCheck} onChange={()=>dispatch(themeActions.changeThemeCheck())}/>
         </div>
 

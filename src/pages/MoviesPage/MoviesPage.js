@@ -3,10 +3,10 @@ import {useSearchParams} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {Pagination} from "@mui/material";
 
-import {Movies} from "../components";
-import {Search} from "../components/Header/Search";
+import {Movies} from "../../components";
+import {Search} from "../../components/Header/Search";
 
-import css from './moviesPage.module.css';
+import css from './MoviesPage.module.css';
 
 
 const MoviesPage = () => {
