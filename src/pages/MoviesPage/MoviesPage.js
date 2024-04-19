@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 import {Pagination} from "@mui/material";
 
 import {Movies} from "../../components";
-import {Search} from "../../components/Header/Search";
+import {Search} from "../../components/Search/Search";
 
 import css from './MoviesPage.module.css';
 

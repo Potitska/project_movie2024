@@ -1,4 +1,4 @@
-import css from './Header.module.css';
+import css from '../Header/Header.module.css';
 
 const Search = ({setSearchText,searchText}) => {
 
