@@ -12,8 +12,10 @@ import css from './card.module.css';
 const MovieOneCard = ({movie}) => {
     
     const navigate = useNavigate();
+
     const dispatch = useDispatch();
     const {favoriteMovies} = useSelector(state => state.movies);
+
     const [isFavorite, setIsFavorite] = useState(false);
 
     useEffect(()=>{

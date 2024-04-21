@@ -1,6 +1,22 @@
 import css from '../Header/Header.module.css';
+import {useRef} from "react";
+import {useDispatch} from "react-redux";
+import {setSearchValue} from "../../redux";
 
-const Search = ({setSearchText,searchText}) => {
+const Search = () => {
+
+    const dispatch = useDispatch();
+
+    const inputRef = useRef();
+    const onChangeInput = ()=> {
+        dispatch(setSearchValue(inputRef.current.value))
+    }
+
+    const clearInput = ()=> {
+        dispatch(setSearchValue(''))
+        inputRef.current.value = ''
+        inputRef.current.focus()
+    }
 
     return (
         <div className={css.search}>
@@ -12,11 +28,15 @@ const Search = ({setSearchText,searchText}) => {
                 </g>
             </svg>
                 <input
+                    ref={inputRef}
                     type="text"
-                    value={searchText}
                     placeholder={'Search movie...'}
-                    onChange={(event) => setSearchText(event.target.value)}
+                    onChange={onChangeInput}
                 />
+            <div onClick={clearInput}>
+                <img className={css.iconClear}
+                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJUlEQVR4nO3YT0sCQRyH8YeuUu0KG/RHUG8efAceetFBJ6noEKUI6iG1wHolxcIYg6wi67Qzs3w/IHga92F09zeCiIiIiMg/6QEPwKXDNRvAHXBLhYbADzAHLhysdwo8W2ueUJEMmJoPfj9yZ/KdeDRrfQNdKpYCY3MBC+DKQUQHT46JsSO+fEYUxSwPjMkjnkKKsGNGVsw1u50BLyFGFMWsdsQEH7GR7Ik534poE7hkK+YmxoiNJjAxF/4BvJr3n0CLyCTAmwnIX+uYdqJ2Ic06fLWSgjtXdD/2dM/tN5pnSHrA0z3Y0aTMvBVsTFpiAg5mfHc9xnuNyaxT4qLkKbFhzv7eTocZMHN41PUWM6zLnw99E+Miwo65BwYO1xQRERER4c8v6Th7MMbV15kAAAAASUVORK5CYII=" alt='delete'/>
+            </div>
         </div>
     );
 };

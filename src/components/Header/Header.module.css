@@ -7,8 +7,7 @@
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    padding-right: 15%;
-    padding-left: 15%;
+
 }
 
 .Header > a {
@@ -19,7 +18,6 @@
     font-size: 50px;
     font-weight: bold;
     color: white;
-
 }
 
 .moviesList {
@@ -31,8 +29,6 @@
 
 .search {
     position: relative;
-    right: -234px;
-    top: 22px;
 }
 
 .search > input {
@@ -45,6 +41,19 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
         }
 
+.iconClear {
+    width: 22px;
+    height: 22px;
+    opacity: 0.3;
+    position: absolute;
+    right: 13px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.IconClear:hover {
+    opacity: 0.8;
+}
 
 .icon {
     cursor: pointer;
@@ -54,6 +63,10 @@
     position: absolute;
     left: 6px;
     top: 6px
+}
+
+.themeCheck{
+    right: 20px;
 }
 
 @media screen and (max-width: 768px) {

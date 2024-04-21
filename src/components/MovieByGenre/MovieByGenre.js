@@ -11,7 +11,6 @@ const MovieByGenre = () => {
 
     const key = useParams();
 
-
     const {movieByGenre} = useSelector(state => state.movies);
 
     const dispatch = useDispatch();
@@ -21,6 +20,7 @@ const MovieByGenre = () => {
     }, [dispatch, key])
 
     const {results} = movieByGenre;
+
     if (results) {
         return (
             <div className={css.movies_list}>

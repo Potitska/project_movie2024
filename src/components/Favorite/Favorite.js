@@ -1,5 +1,6 @@
 import React from 'react';
 import {useSelector} from "react-redux";
+
 import {MovieOneCard} from "../MovieOneCard/MovieOneCard";
 import {NoFavoritePage} from "../../pages";
 

@@ -8,10 +8,8 @@ const MovieById = () => {
 
     const {state} = useLocation();
 
-
     const {original_language, original_title, overview, popularity, vote_average, poster_path, release_date} = state
     const img_url = `https://image.tmdb.org/t/p/w500${poster_path}`
-
 
     return (
         <div className={css.card}>
